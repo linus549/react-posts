@@ -10,18 +10,18 @@ function Menu({ open, firstMenuItemRef, lastMenuItemRef, onClose }) {
   useEscapeKey(open, onClose);
 
   useEffect(
-    function manageResizeListener() {
-      if (open) {
-        window.addEventListener("resize", onClose);
-      } else {
-        window.removeEventListener("resize", onClose);
+    function manageMediaQueryListener() {
+      function handleChange(e) {
+        if (e.matches) {
+          onClose();
+        }
       }
 
-      return () => {
-        window.removeEventListener("resize", onClose);
-      };
+      mediaQueryList.addEventListener("change", handleChange);
+
+      return () => mediaQueryList.removeEventListener("change", handleChange);
     },
-    [open, onClose]
+    [onClose]
   );
 
   useEffect(
@@ -57,6 +57,8 @@ function Menu({ open, firstMenuItemRef, lastMenuItemRef, onClose }) {
     </StyledMenu>
   );
 }
+
+const mediaQueryList = window.matchMedia(`(min-width: ${breakpoints.MEDIUM})`);
 
 const StyledMenu = styled.div`
   flex: 1;
