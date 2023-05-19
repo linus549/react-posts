@@ -31,7 +31,7 @@ function App() {
 }
 
 const ScrollWrapper = styled.div`
-  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   overflow: auto scroll;
   padding: var(--spacing-md) 0;
 

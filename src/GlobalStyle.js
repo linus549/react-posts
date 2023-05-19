@@ -81,7 +81,7 @@ body {
   color: var(--text);
   background-color: var(--background);
   accent-color: var(--primary);
-  height: 100vh;
+  height: 100dvh;
 }
 
 input,

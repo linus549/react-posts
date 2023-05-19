@@ -94,8 +94,8 @@ const Backdrop = styled.div(
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: #000;
     opacity: 0;
     transition: opacity 0.2s ease-in;
@@ -117,8 +117,8 @@ const ScrollWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   overflow: auto;
   padding: var(--spacing-md) var(--spacing-sm);
 `;
