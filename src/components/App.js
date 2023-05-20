@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyle from "GlobalStyle";
-import { breakpoints } from "config";
+import { SCROLL_DELAY, breakpoints } from "config";
 import Header from "components/Header/Header";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
   useEffect(
     function scrollToTop() {
-      scrollWrapperRef.current.scroll(0, 0);
+      setTimeout(() => scrollWrapperRef.current.scroll(0, 0), SCROLL_DELAY);
     },
     [pathname]
   );

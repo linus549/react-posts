@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { SCROLL_DELAY } from "config";
 
 function usePagination(items, itemsPerPage, scrollToRef, shouldScroll) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +20,7 @@ function usePagination(items, itemsPerPage, scrollToRef, shouldScroll) {
   useEffect(
     function scrollOnPageChange() {
       if (shouldScroll && scrollToRef.current) {
-        scrollToRef.current.scrollIntoView();
+        setTimeout(() => scrollToRef.current.scrollIntoView(), SCROLL_DELAY);
       }
     },
     [shouldScroll, scrollToRef, currentPage]

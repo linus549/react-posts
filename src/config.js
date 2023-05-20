@@ -1,3 +1,4 @@
+export const SCROLL_DELAY = 100;
 export const LOADER_DEMO_DELAY = 3000;
 export const FETCH_TIMEOUT = 10000;
 export const VALIDATION_MESSAGE_DELAY = 250;
