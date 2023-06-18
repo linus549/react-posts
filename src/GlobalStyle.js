@@ -107,6 +107,7 @@ h6 {
 }
 
 p {
+  max-width: 70ch;
   margin-bottom: 1rem;
 }
 
