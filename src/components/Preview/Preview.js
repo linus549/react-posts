@@ -100,6 +100,8 @@ const Points = styled.div`
 
 const Container = styled.div`
   flex: 1;
+  min-width: 0;
+  max-width: 100%;
 `;
 
 const Content = styled.div`
@@ -112,6 +114,8 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
+  min-width: 0;
+
   @media (min-width: ${breakpoints.MEDIUM}) {
     margin-right: var(--spacing-md);
   }
