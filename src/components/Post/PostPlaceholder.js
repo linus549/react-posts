@@ -126,6 +126,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.div`
   flex: 1;
+  min-width: 5.6rem;
   height: 2.25rem;
   background-color: var(--primary);
   border-radius: var(--border-radius);
